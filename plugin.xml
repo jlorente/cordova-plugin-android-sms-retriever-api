@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="cordova-plugin-android-sms-retriever"
+	version="1.0.0">
+
+	<name>Android Sms Retriver</name>
+	<description>Cordova plugin used to retrieve verification Sms in Android using the SmsRetriever API</description>
+	<author>Jose Lorente</author>
+	<license>BSD 3-Clause</license>
+	<keywords>cordova,android,SmsRetriever,sms,retriever</keywords>
+
+	<engines>
+		<engine name="cordova" version=">=6.0.0" />
+	</engines>
+
+	<dependency id="cordova-support-google-services" />
+
+	<js-module src="www/SmsRetriever.js" name="SmsRetriever">
+    <clobbers target="cordova.plugins.smsRetriever" />
+	</js-module>
+
+	<!-- android -->
+	<platform name="android">
+    <preference name="PLAY_SERVICES_AUTH_VERSION" default="15.+"/>
+    <preference name="PLAY_SERVICES_AUTH_API_PHONE_VERSION" default="15.+"/>
+
+		<framework src="com.google.android.gms:play-services-auth:$PLAY_SERVICES_AUTH_VERSION"/>
+    <framework src="com.google.android.gms:play-services-auth-api-phone:$PLAY_SERVICES_AUTH_API_PHONE_VERSION"/>
+
+		<config-file target="res/xml/config.xml" parent="/*">
+      <feature name="SmsRetriever">
+        <param name="android-package" value="com.lorentech.cordova.smsretriever.SmsRetrieverCDVPlugin"/>
+			</feature>
+		</config-file>
+
+		<source-file src="src/android/SmsRetrieverCDVPlugin.java" target-dir="src/com/lorentech/cordova/smsretriever" />
+	</platform>
+</plugin>

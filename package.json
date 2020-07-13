@@ -1,0 +1,21 @@
+{
+  "name": "cordova-plugin-gadaca",
+  "version": "1.0.0",
+  "description": "Gadaca Cordova Plugin",
+  "cordova": {
+    "id": "cordova-plugin-android-sms-retriever",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "ecosystem:cordova",
+    "cordova-android",
+    "sms",
+    "retriever"
+  ],
+  "author": "Jose Lorente Martin",
+  "licence": "BSD 3-Clause"
+}
