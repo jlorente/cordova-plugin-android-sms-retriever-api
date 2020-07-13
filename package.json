@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-android-sms-retriever-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cordova plugin to enable single SMS reception in Android using the SMS Retriever API",
   "cordova": {
     "id": "cordova-plugin-android-sms-retriever-api",
