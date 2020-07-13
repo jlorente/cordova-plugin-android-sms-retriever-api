@@ -17,13 +17,21 @@ $ cordova plugin add cordova-plugin-android-sms-retriever
 The plugin requires the Google libraries com.google.android.gms:play-services-auth
 and com.google.android.gms:play-services-auth-api-phone.
 
-The default versions of this two libraries is set to 15.+, but you can configure
+The default versions of this two libraries has been set to 15.+, but you can configure
 the version you want by defining the PLAY_SERVICES_AUTH_VERSION and
 PLAY_SERVICES_AUTH_API_PHONE_VERSION preferences in config.xml or package.json.
 
+### Example
+
+```xml
+<platform name="android">
+  <preference name="PLAY_SERVICES_AUTH_VERSION" value="17.+" />
+</platform>
+```
+
 ## Basic Usage
 
-To start listening for a single incoming [verification SMS](https://developers.google.com/identity/sms-retriever/verify#1_construct_a_verification_message "verification SMS") use the following method.
+To start listening for a single incoming [SMS](https://developers.google.com/identity/sms-retriever/verify#1_construct_a_verification_message "verification SMS") with a verification code during 5 minutes use the following method.
 
 ```javascript
 cordova.plugins.smsRetriever.start(function() {
@@ -35,8 +43,8 @@ cordova.plugins.smsRetriever.start(function() {
 ```
 
 Calling the above method will only start listening for incoming SMS messages with
-the application signature. In order to listen to the SMS received event you will
-have to call the "on" method.
+the application signature. In order to attach an event handler to the SMS received event
+you will have to call the "on" method.
 
 ```javascript
 cordova.plugins.smsRetriever.on('smsReceived', function(smsMessage) {
@@ -111,6 +119,15 @@ Fired when the listener receives an SMS message.
 | Parameter               | Type     | Description                                                                     |
 | ----------------------- | -------- | ------------------------------------------------------------------------------- |
 | `smsMessage`   | `string` | The complete received SMS message             |
+
+#### Example
+
+```javascript
+cordova.plugins.smsRetriever.on('smsReceived', (smsMessage) => {
+  // Sms received
+  console.error('This is the content of the SMS message: ' + smsMessage);
+});
+```
 
 ### cordova.plugins.smsRetriever.on('timeout', eventHandler)
 
