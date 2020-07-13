@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-gadaca",
+  "name": "cordova-plugin-android-sms-retriever",
   "version": "1.0.0",
   "description": "Gadaca Cordova Plugin",
   "cordova": {
