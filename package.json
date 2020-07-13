@@ -1,21 +1,35 @@
 {
   "name": "cordova-plugin-android-sms-retriever",
   "version": "1.0.0",
-  "description": "Gadaca Cordova Plugin",
+  "description": "Cordova plugin to enable single SMS reception in Android using the SMS Retriever API",
   "cordova": {
     "id": "cordova-plugin-android-sms-retriever",
     "platforms": [
       "android"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlorente/cordova-plugin-android-sms-retriever"
+  },
+  "bugs": {
+    "url": "https://github.com/jlorente/cordova-plugin-android-sms-retriever/issues"
+  },
   "keywords": [
     "cordova",
     "plugin",
-    "ecosystem:cordova",
-    "cordova-android",
     "sms",
-    "retriever"
+    "retriever",
+    "ecosystem:cordova",
+    "cordova-android"
   ],
   "author": "Jose Lorente Martin",
-  "licence": "BSD 3-Clause"
+  "license": "BSD 3-Clause",
+  "engines": {
+    "cordovaDependencies": {
+      "1.0.0": {
+        "cordova": ">6.0.0"
+      }
+    }
+  }
 }
