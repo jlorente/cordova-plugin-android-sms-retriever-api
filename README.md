@@ -1,15 +1,21 @@
-Cordova Plugin Android SMS Retriever
-====================================
-Cordova plugin to enable single SMS reception in Android using the [SMS Retriever API](https://developers.google.com/identity/sms-retriever/overview).
+Cordova Plugin Android SMS Retriever API
+========================================
+
+Cordova plugin to enable single SMS reception in Android using the [SMS Retriever API](https://developers.google.com/identity/sms-retriever/overview)
+in order to read automatically one-time passwords from SMS messages.
+
+This plugin is intended to comply with the critical changes introduced by Google
+in 2019 in [SMS and CALL LOGS policies](https://support.google.com/googleplay/android-developer/answer/9047303)
+and does not need extra permissions to work.
 
 ## Installation
 
-The installation required cordova 6.0+
+The installation required cordova 6.0+.
 
 Use the cordova client in order to install the package.
 
 ```bash
-$ cordova plugin add cordova-plugin-android-sms-retriever
+$ cordova plugin add cordova-plugin-android-sms-retriever-api
 ```
 
 ## Configuration
