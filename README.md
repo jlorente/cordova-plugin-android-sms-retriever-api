@@ -29,9 +29,15 @@ PLAY_SERVICES_AUTH_API_PHONE_VERSION preferences in config.xml or package.json.
 </platform>
 ```
 
+## SMS message preparation
+
+To use the [SMS Retriever API](https://developers.google.com/identity/sms-retriever/overview)
+you need to include a text signature in your SMS content. You can find more about
+this topic in the [Google Developers Guide](https://developers.google.com/identity/sms-retriever/verify)
+
 ## Basic Usage
 
-To start listening for a single incoming [SMS](https://developers.google.com/identity/sms-retriever/verify#1_construct_a_verification_message "verification SMS") with a verification code during 5 minutes use the following method.
+To start listening for a single incoming SMS with a verification code during 5 minutes use the following method.
 
 ```javascript
 cordova.plugins.smsRetriever.start(function() {
@@ -149,6 +155,13 @@ Unregisters an event handler for the event name. If eventHandler is not defined,
 ```javascript
 cordova.plugins.smsRetriever.off('smsReceived');
 ```
+
+## Further Considerations
+
+If you want to debug the SMS reception with Android Studio, remember to include
+the same signing configuration as the one you have use to create the SMS text
+signature in the app Module by right clicking in your project, chosing the
+Open Module Settings options and selecting the app Module.
 
 ## License
 Copyright &copy; 2020 José Lorente Martín <jose.lorente.martin@gmail.com>.
