@@ -164,10 +164,21 @@ cordova.plugins.smsRetriever.off('smsReceived');
 
 ## Further Considerations
 
+### Debugging SMS reception
+
 If you want to debug the SMS reception with Android Studio, remember to include
-the same signing configuration as the one you have use to create the SMS text
+the same signing configuration as the one you have used to create the SMS text
 signature in the app Module by right clicking in your project, chosing the
 **Open Module Settings** option and selecting the **app** Module.
+
+### App signing by Google Play
+
+If you use the App signing by Google Play feature, the applications downloaded from Google 
+Play Store will have a different signature than the one used by you to sign the apk.
+
+In this case, you will have to download the **App signing certificate** of the app 
+from the Google Play Console, use the certificate to create a .jks and use this file 
+to obtain the 11 characters signature that should be attached to the SMS.
 
 ## License
 Copyright &copy; 2020 José Lorente Martín <jose.lorente.martin@gmail.com>.
