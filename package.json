@@ -27,9 +27,12 @@
   "license": "BSD 3-Clause",
   "engines": {
     "cordovaDependencies": {
-      "1.0.0": {
+      "1.0.2": {
         "cordova": ">6.0.0"
       }
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
