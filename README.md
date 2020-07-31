@@ -10,7 +10,7 @@ and does not need extra permissions to work.
 
 ## Installation
 
-The installation required cordova 6.0+.
+The installation requires cordova 6.0+.
 
 Use the cordova client in order to install the package.
 
