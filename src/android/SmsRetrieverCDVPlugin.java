@@ -81,12 +81,16 @@ public class SmsRetrieverCDVPlugin extends CordovaPlugin {
 
 
 	public void trigger(@NonNull String action) {
-      trigger(action, new Object());
-  }
+		trigger(action, new Object());
+	}
 
 	public void trigger(@NonNull String action, @NonNull Object data) {
 		JSONObject message = new JSONObject();
 
+		if (!callbackList.containsKey(action)) {
+			return;
+		}
+		
 		try {
 			message.put("name", action);
 			message.put("data", data);
