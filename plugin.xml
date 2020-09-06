@@ -36,5 +36,9 @@
 		</config-file>
 
 		<source-file src="src/android/SmsRetrieverCDVPlugin.java" target-dir="src/com/lorentech/cordova/smsretriever" />
+		
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-feature android:name="android.hardware.telephony" android:required="false" />
+		</config-file>
 	</platform>
 </plugin>
