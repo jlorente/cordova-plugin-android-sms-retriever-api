@@ -148,7 +148,7 @@ public class SmsRetrieverCDVPlugin extends CordovaPlugin {
 						}
 					};
 
-					cordova.getActivity().getApplicationContext().registerReceiver(smsBroadcastReceiver, intentFilter);
+					cordova.getActivity().getApplicationContext().registerReceiver(smsBroadcastReceiver, intentFilter, Context.RECEIVER_NOT_EXPORTED);
 					PluginResult result = new PluginResult(PluginResult.Status.OK, "Sms Retriever will last 5 minutes");
 					result.setKeepCallback(true);
 					callbackContext.sendPluginResult(result);
